@@ -51,7 +51,7 @@ header nav ul li:nth-of-type(3) {
 /* Section: Sfeerafbeelding en tekst bovenaan pagina */
 
 section#intro {
-    background-image: url("/images/beach.png");
+    background-image: url(/images/beach1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
