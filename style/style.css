@@ -272,10 +272,9 @@ section#Resultaten article p {
 
 
 section#Resultaten article img[title="unlike"] {
+    margin: -14.5em 16em;
     max-width: 3em;
     max-height: 3em;
     position: absolute;
     transition: .3s linear;
-    top: 1em;
-    right: 1em;
 }
