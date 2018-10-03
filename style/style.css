@@ -48,8 +48,8 @@ header nav ul li:nth-of-type(3) {
 
 /* Section: Sfeerafbeelding en tekst bovenaan pagina */
 
-section#intro {
-    background-image: url("/images/beach.png");
+#intro {
+    background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -64,7 +64,7 @@ section#intro h1 {
     background-color: #ffffff;
     text-align: center;
     padding: 1.2em 0em;
-    margin: 1em 2em;
+    margin: 1em auto;
     text-align: center;
     border-radius: .5em;
     max-width: 15em;
@@ -119,11 +119,12 @@ section#best_gewaardeerd article p {
 /* Best gewaardeerd - Like button */
 
 section#best_gewaardeerd article img[title="unlike"] {
-    margin: -14.5em 16em;
     max-width: 3em;
     max-height: 3em;
     position: absolute;
     transition: .3s linear;
+    top: 1em;
+    right: 1em;
 }
 
 /* Best gewaardeerd - Titel */
@@ -271,9 +272,10 @@ section#Resultaten article p {
 
 
 section#Resultaten article img[title="unlike"] {
-    margin: -14.5em 16em;
     max-width: 3em;
     max-height: 3em;
     position: absolute;
     transition: .3s linear;
+    top: 1em;
+    right: 1em;
 }
