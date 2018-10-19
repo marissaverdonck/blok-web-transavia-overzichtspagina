@@ -9,9 +9,12 @@
 }
 
 
-h1,h2,h3{
+h1,
+h2,
+h3,
+legend {
 
-        font-family: 'Nexa_Bold', 'trebuchet ms', 'sans-serif';
+    font-family: 'Nexa_Bold', 'trebuchet ms', 'sans-serif';
 }
 
 body {
@@ -19,6 +22,7 @@ body {
     width: 100%;
     margin: 0;
     font-family: 'Nexa_Regular', 'trebuchet ms', 'sans-serif';
+    background-color: #f3e5d8;
 }
 
 
@@ -89,20 +93,17 @@ section#intro h1 {
 
 section#best_gewaardeerd {
     background-color: #f3e5d8;
-    padding-top: 0.01em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
 
 }
 
 section#best_gewaardeerd h2 {
     color: #2800a0;
     font-size: 1.8em;
-    margin: 1em 0.5em 1em 0.5em;
+    padding: 1em 0.5em 0.5em 0.5em;
+    margin: 0em;
 }
 
-/* Laat verhalen meeschalen met de content, Bijvoorbeeld de verhalen in de resultaten section. Als je de articles géén vaste width geeft gaat het al beter! */
-
-/*Geef article heading meer ruimte, haal width weg en geef rechts padding*/
 
 section#best_gewaardeerd article {
     margin: 0.3em;
@@ -110,7 +111,7 @@ section#best_gewaardeerd article {
     background-color: #ffffff;
     border-radius: .75em;
     min-height: 19em;
-    min-width: 18em;
+    width: 18em;
 
 }
 
@@ -136,28 +137,28 @@ section#best_gewaardeerd article p {
 }
 
 /* Best gewaardeerd - Like button */
-section#best_gewaardeerd article img[title="unlike"] {
-        max-width: 3em;
-        max-height: 3em;
-        position: absolute;
-        transition: .3s linear;
-        top: 1em;
-        right: 1em;
 
-    }
+section#best_gewaardeerd article img[title="unlike"] {
+    max-width: 3em;
+    max-height: 3em;
+    position: absolute;
+    transition: .3s linear;
+    top: 1em;
+    right: 1em;
+
+}
 
 /* Best gewaardeerd - Titel */
 
-section#best_gewaardeerd a{
-text-decoration: none;
+section#best_gewaardeerd a {
+    text-decoration: none;
 }
 
 section#best_gewaardeerd article h3 {
     color: #2800a0;
     font-size: 1.35em;
     word-wrap: break-word;
-    margin: 0.5em 0 0 0.5em;
-    padding-right: 0.5em
+    margin: 0.5em;
 
 }
 
@@ -177,14 +178,18 @@ section#best_gewaardeerd div {
 section#Filter {
     background-color: #ffffff;
     padding-bottom: 2em;
+    position: relative;
+
 
 }
 
 section#Filter h2 {
     background-color: #ffffff;
     color: #00d66c;
-    margin: 1em 0.5em 1em 0.5em;
+    padding: 1em 0.5em 0.5em 0.5em;
+    margin: 0em;
     font-size: 1.8em;
+
 }
 
 
@@ -198,6 +203,7 @@ section#Filter button {
     box-shadow: inset 0 -.1875rem .0625rem #ca2b55;
     transition: .3s linear;
     margin: 0em -0.5em 0.3em 0.5em;
+
 }
 
 section#Filter button:hover {
@@ -211,27 +217,36 @@ section#Filter button:active {
 }
 
 
+section#Filter div {
+    margin-left: -0.5em;
+    display: flex;
+    justify-content: left;
+    overflow-x: scroll;
+    text-decoration: none;
+}
+
+
 /* Resultaten */
 
 section#Resultaten {
     background-color: #f3e5d8;
-    padding-top: 0.01em;
 }
 
 
 section#Resultaten h2 {
     color: #2800a0;
     font-size: 1.8em;
-    margin: 1em 0.5em 1em 0.5em;
+    padding: 1em 0.5em 0.5em 0.5em;
+    margin: 0em;
 }
 
 /* Resultaten - Sorteren */
 
 section#Resultaten form {
 
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, .7);
     border-radius: .75em;
-    margin: 0.5em;
+    margin: 0 0.5em;
     padding-bottom: 0.5em;
 }
 
@@ -239,6 +254,7 @@ section#Resultaten form h3 {
     color: #00d66c;
     margin-left: 0.5em;
     padding-top: 0.5em;
+    margin-top: 0;
 }
 
 section#Resultaten form label {
@@ -251,23 +267,45 @@ section#Resultaten form input {
     margin-left: 1em
 }
 
+section#Resultaten form [type=submit] {
+    font-size: 1.25em;
+    background-color: #00d66c;
+    color: #ffffff;
+    /* Bron: https://www.transavia.com*/
+    padding: .4375em 1.5em .5625em;
+    border-radius: 1.25em;
+    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
+    transition: .3s linear;
+    margin: 0em -0.5em 0.3em 0.5em;
+}
+
+section#Resultaten form [type=submit]:hover {
+    background-color: #4de298;
+}
+
+section#Resultaten form [type=submit]:active {
+    background-color: #00d66c;
+    /* Bron: https://www.transavia.com*/
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
+
 /* Resultaten - Verhalen */
 
-
-
 section#Resultaten a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 section#Resultaten article {
     background-color: #ffffff;
     border-radius: .75em;
-    width: 18em;
+    max-width: 30em;
+    width: 90%;
     position: relative;
-    width:90%;
-    max-width: 50em;
     display: block;
     margin: 1em auto;
+    max-height: 30em;
+
 
 }
 
@@ -275,9 +313,8 @@ section#Resultaten article h3 {
     color: #2800a0;
     font-size: 1.4em;
     word-wrap: break-word;
-    margin: 0.5em 0 0 0.5em;
-    padding-right: 0.5em;
-    padding-bottom: 0.4em;
+    margin: 0.5em;
+    padding-bottom: 0.5em;
 
 }
 
@@ -285,7 +322,9 @@ section#Resultaten article img {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
     width: 100%;
-    height: 15em;
+    height: auto;
+    max-height: 18em;
+    overflow: hidden;
 }
 
 section#Resultaten article p {
@@ -293,10 +332,11 @@ section#Resultaten article p {
     color: #ffffff;
     background-color: #00d66c;
     padding: 0.2em;
+    margin: 0;
     position: absolute;
-    margin: -9.5em .5em;
     border-radius: .5em;
-
+    top: 0.5em;
+    left: 0.5em;
 }
 
 
@@ -305,6 +345,56 @@ section#Resultaten article img[title="unlike"] {
     max-height: 3em;
     position: absolute;
     transition: .3s linear;
-    top: 1em;
-    right: 1em;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+
+/* Inlogpagina formulier  */
+
+#login form {
+    border-radius: 1em;
+
+}
+
+#login fieldset {
+    display: block;
+    background-color: #f3e5d8;
+    width: 30em;
+    margin: 3em auto;
+}
+
+#login fieldset legend {
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 2.37em;
+    color: #00d66c;
+    padding: 0.5em 0em;
+
+}
+
+#login fieldset {
+    background-color: #f3e5d8;
+    width: 30em;
+    margin: 3em auto;
+    padding: 0;
+    border: none;
+}
+
+#login fieldset label {
+    margin: 2em 0em;
+
+}
+
+#login {
+    background-image: url("../images/beach.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 21em;
+    margin: 0;
+    padding-top: 0.01em;
+
+
 }

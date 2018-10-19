@@ -17,132 +17,187 @@
                 <li>
                     <a href="index.html"> <img src="images/logo.png" alt="logo_transavia"></a></li>
                 <li>
-                    <a href="index.html"> <img src="images/login_icon.png" alt="login_icon"></a></li>
+                    <a href="login.html"> <img src="images/login_icon.png" alt="login_icon"></a></li>
                 <li>
                     <a href="index.html"> <img src="images/hart.png" alt="favorieten"></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <section id="intro">
+        <h1> Verhalen voor onderweg</h1>
+    </section>
 
-<!-- Zet alleen de belangrijkste content in de main section ..dus niet alle sections!-->
+    <!-- Top 5 verhalen -->
+    <section id="best_gewaardeerd">
+        <h2> Best gewaardeerde verhalen </h2>
+        <div>
 
-        <!-- Top 5 verhalen -->
-        <section id="intro">
-            <h1> Verhalen voor onderweg</h1>
-        </section>
-
-        <section id="best_gewaardeerd">
-            <h2> Best gewaardeerde verhalen </h2>
-            <div>
-
-<!--Zet een link om de articles zodat de verhalen klikbaar zijn..-->
-                <a href="index.html"><article>
-                    <img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <!--Joost: Zet een link om de articles zodat de verhalen klikbaar zijn..-->
+            <a href="index.html">
+                <article>
+                    <img src="../blok-web/images/verliefd.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
                     <h3>Verliefd</h3>
 
-                </article></a>
+                </article>
+            </a>
 
-                <a href="index.html"><article><img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <a href="index.html">
+                <article><img src="../blok-web/images/decock.jpeg" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
                     <h3>De Cock en het raadsel van het verdwenen boek</h3>
-                    </article></a>
+                </article>
+            </a>
 
-            <a href="index.html"><article><img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <a href="index.html">
+                <article><img src="../blok-web/images/onomatopee.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3>Alzheimer</h3>
-                </article></a>
+                    <h3>Onomatopeer</h3>
+                </article>
+            </a>
 
-                <a href="index.html"><article>
-                    <img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <a href="index.html">
+                <article>
+                    <img src="../blok-web/images/stoned.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3>Verliefd</h3>
+                    <h3>Stoned</h3>
 
-                </article></a>
+                </article>
+            </a>
 
 
-                <a href="index.html"><article>
-                    <img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <a href="index.html">
+                <article>
+                    <img src="../blok-web/images/poepen.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3>Verliefd</h3>
+                    <h3>Poepen</h3>
 
-                </article></a>
+                </article>
+            </a>
 
 
-                <a href="index.html"><article>
-                    <img src="https://static.gamma.nl/dam/124011/123" title="Verliefd" alt="verhaal" />
+            <a href="index.html">
+                <article>
+                    <img src="../blok-web/images/sportcommentaar.jpeg" alt="sportcommentaar" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3>Verliefd</h3>
+                    <h3>Sportcommentaar</h3>
 
-                </article></a>
+                </article>
+            </a>
 
-            </div>
+        </div>
 
-        </section>
+    </section>
 
-        <!-- Filter -->
+    <!-- Filter -->
 
-        <section id="Filter">
-            <h2> Kies een stemming </h2>
-
+    <section id="Filter">
+        <h2> Kies een stemming </h2>
+        <div>
             <button> Blij </button>
             <button> Boos </button>
             <button> Druk </button>
             <button> Rustig </button>
             <button> Vaag </button>
             <button> Inspirerend </button>
+        </div>
 
-        </section>
+    </section>
 
+    <main>
         <section id="Resultaten">
-            <h2>Resultaten </h2>
+            <h2>99 Resultaten </h2>
 
             <!-- Sorteren -->
-<!-- Geef form een submit button-->
-            <form>
-                <h3>Sorteren op:</h3>
-<!-- Geef radio buttons hetzelfde name attribute ..zodat ze gegroepeerd zijn, en je daadwerkelijk maar één optie kan kiezen-->
 
-                <input id="titel_az" type="radio" name="titel_az">
+            <!-- Joost: Geef form een submit button-->
+
+            <form action="index.html" method="get">
+                <h3>Sorteren op:</h3>
+
+
+                <!-- Joost: Geef radio buttons hetzelfde name attribute ..zodat ze gegroepeerd zijn, en je daadwerkelijk maar één optie kan kiezen-->
+
+                <input id="titel_az" type="radio" name="sorteren" checked="checked">
                 <label for="titel_az">Titel A-Z</label>
 
 
-                <input id="titel_za" type="radio" name="titel_za">
+                <input id="titel_za" type="radio" name="sorteren">
                 <label for="titel_za">Titel Z-A</label>
 
 
-                <input id="waardering" type="radio" name="waardering">
+                <input id="waardering" type="radio" name="sorteren">
                 <label for="waardering">Waardering</label>
+
+                <input id="button" type="submit" name="sorteren" value="Sorteer" />
 
             </form>
 
+
             <!-- Resultaten -->
             <div>
-                <a href="index.html"><article><img src="https://static.gamma.nl/dam/124011/123" alt="verhaal" />
-                    <p>8,3</p>
-                    <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3> De Cock en het raadsel van het verdwenen boek</h3>
-                    </article></a>
+                <a href="index.html">
+                    <article><img src="../blok-web/images/decock.jpeg" alt="verhaal" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> De Cock en het raadsel van het verdwenen boek</h3>
+                    </article>
+                </a>
 
-                <a href="index.html"><article><img src="https://static.gamma.nl/dam/124011/123" alt="verhaal" />
-                    <p>8,3</p>
-                    <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3> Alzheimer</h3>
-                    </article></a>
+                <a href="index.html">
+                    <article><img src="../blok-web/images/droom.png" alt="verhaal" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> Droom</h3>
+                    </article>
+                </a>
 
-               <a href="index.html"> <article><img src="https://static.gamma.nl/dam/124011/123" alt="verhaal" />
-                    <p>8,3</p>
-                    <img src="images/unlike.png" title="unlike" alt="unlike">
-                    <h3> Verliefd</h3>
-                   </article></a>
+                <a href="index.html">
+                    <article><img src="../blok-web/images/onomatopee.jpeg" alt="verhaal" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> VOnomatope</h3>
+                    </article>
+                </a>
+
+                <a href="index.html">
+                    <article><img src="../blok-web/images/poepen.jpeg" alt="verhaal" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3>Poepen</h3>
+                    </article>
+                </a>
+
+                <a href="index.html">
+                    <article><img src="../blok-web/images/sportcommentaar.jpeg" alt="sportcommentaar" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> Sportcommentaar</h3>
+                    </article>
+                </a>
+
+                <a href="index.html">
+                    <article><img src="../blok-web/images/stoned.jpeg" alt="sportcommentaar" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> Stoned</h3>
+                    </article>
+                </a>
+
+                <a href="index.html">
+                    <article><img src="../blok-web/images/verliefd.jpeg" alt="verhaal" />
+                        <p>8,3</p>
+                        <img src="images/unlike.png" title="unlike" alt="unlike">
+                        <h3> Verliefd</h3>
+                    </article>
+                </a>
             </div>
 
         </section>
