@@ -320,7 +320,7 @@ section#Resultaten article h3 {
     border-bottom-right-radius: .75em;
 }
 
-section#Resultaten article img {
+section#Resultaten article img:nth-child(1) {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
     width: 100%;
@@ -340,13 +340,13 @@ section#Resultaten article p {
 }
 
 
-section#Resultaten article img[title="unlike"],
-img[title="like"] {
+section#Resultaten article img:nth-child(2) {
     max-width: 3em;
     position: absolute;
     transition: .3s linear;
     top: 0.5em;
     right: 0.5em;
+
 }
 
 /* Inlogpagina formulier  */
@@ -730,12 +730,12 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-gap: 1em;
     }
 
-    section#Resultaten a {
+    section#Resultaten article {
         display: flex;
         justify-content: center;
     }
 
-    section#Resultaten a article {
+    section#Resultaten article a {
         grid-column: 1/2;
         width: 100%;
         margin: 0em;
@@ -897,12 +897,12 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-gap: 1em;
     }
 
-    section#Resultaten a {
+    section#Resultaten article {
         display: flex;
         justify-content: center;
     }
 
-    section#Resultaten a article {
+    section#Resultaten article a{
         grid-column: 1/2;
         width: 100%;
         margin: 0em;
