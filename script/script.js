@@ -3,6 +3,27 @@
 /*eslint 'no-console':0*/
 
 
+
+var likeButton = document.querySelector('.hartje');
+var likeArray = ['images/unlike.png', 'images/like.png'];
+var aanUit = 0;
+
+
+/* De like button verandert van uit naar aan. Dit wordt berekend door 1=aan of 0=uit */
+function bewaarVerhaal() {
+    if (aanUit === 0) {
+        aanUit += 1;
+        likeButton.src = likeArray[1];
+        console.log('aan');
+    } else if (aanUit == 1) {
+        aanUit -= 1;
+        likeButton.src = likeArray[0];
+        console.log('uit');
+    }
+}
+
+likeButton.addEventListener('click', bewaarVerhaal);
+
 //verwijzingen naar HTML document
 var buttonBlij = document.getElementById('blij');
 var buttonBlijTekst = document.getElementById('blij').innerHTML;
@@ -32,10 +53,11 @@ var resultaten = document.querySelector('#Filter h3');
 var aantalResultaten = 99;
 var totaal;
 
-/*Tekst in button filter*/
+/* Tekst in button filter */
 var kruisje = (' | x');
 
 /*Button in filter verandert van kleur en krijgt een kruisje. Dit wordt berekend door 1=aan of 0=uit. Het aantal resultaten verandert in aantal. */
+
 function rekenenBlij() {
     if (countBlij === 0) {
         countBlij += 1;
@@ -155,3 +177,4 @@ buttonDruk.addEventListener('click', rekenenDruk);
 buttonRustig.addEventListener('click', rekenenRustig);
 buttonVaag.addEventListener('click', rekenenVaag);
 buttonInspirerend.addEventListener('click', rekenenInspirerend);
+

@@ -79,7 +79,7 @@ header nav ul li:nth-of-type(1) {
 
 /* Section: Sfeerafbeelding en tekst bovenaan pagina */
 
-#intro {
+section#intro {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -124,8 +124,8 @@ section#intro img {
 
 /* Section: Top 5 Best gewaardeerd */
 
-section#best_gewaardeerd {
-    background-color: #f3e5d8;
+section#best_gewaardeerd article a {
+    background-color: #ffffff;
     padding-bottom: 2em;
 }
 
@@ -138,18 +138,18 @@ section#best_gewaardeerd h2 {
 section#best_gewaardeerd article {
     margin: 0.5em;
     position: relative;
-    width: 18em;
+
 }
 
-section#best_gewaardeerd article img {
+section#best_gewaardeerd article a img {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
-    width: 100%;
+    width: 18em;
 }
 
 /* Best gewaardeerd - Rating */
 
-section#best_gewaardeerd article p {
+section#best_gewaardeerd article a p {
     font-size: 1.3em;
     color: #ffffff;
     background-color: #00d66c;
@@ -167,15 +167,17 @@ section#best_gewaardeerd article img[title="unlike"] {
     transition: .3s linear;
     top: 0.5em;
     right: 1em;
+
 }
 
 /* Best gewaardeerd - Titel */
 
-section#best_gewaardeerd a {
+section#best_gewaardeerd article a {
     text-decoration: none;
+
 }
 
-section#best_gewaardeerd article h3 {
+section#best_gewaardeerd article a h3 {
     background-color: #ffffff;
     color: #2800a0;
     font-size: 1.35em;
@@ -349,7 +351,7 @@ img[title="like"] {
 
 /* Inlogpagina formulier  */
 
-#login {
+section#login {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -361,7 +363,7 @@ img[title="like"] {
 }
 
 
-#login form fieldset {
+section#login form fieldset {
     background-color: rgba(247, 246, 247, .8);
     border: none;
     margin: 3em auto;
@@ -376,7 +378,7 @@ img[title="like"] {
 
 /* Login titel  */
 
-#login form fieldset legend {
+section#login form fieldset legend {
     background-color: #ffffff;
     font-size: 2.37em;
     color: #00d66c;
@@ -388,20 +390,20 @@ img[title="like"] {
 
 /* Login tekst  */
 
-#login form fieldset p {
+section#login form fieldset p {
     margin-bottom: 1.5em;
     margin-left: 1.5em;
 }
 
 /* Login invulvelden  */
 
-#login form fieldset label {
+section#login form fieldset label {
     margin: 1em 0 .3em 1.5em;
 }
 
 /* Login e-mail  */
 
-#login form fieldset [type=email] {
+section#login form fieldset [type=email] {
     margin-bottom: 1em;
     margin-left: 2em;
     padding: .5em;
@@ -412,24 +414,24 @@ img[title="like"] {
     font-size: 80%;
 }
 
-#login form fieldset [type=email]:hover {
+section#login form fieldset [type=email]:hover {
     border: .1em solid #2800a0;
     border-width: .12em;
 }
 
-#login form fieldset [type=email]:valid {
+section#login form fieldset [type=email]:valid {
     border-color: #00d66c;
     border-width: .2em;
 }
 
-#login form fieldset input[type=email]:valid:hover {
+section#login form fieldset input[type=email]:valid:hover {
     border-color: #00d66c;
     border-width: .12em;
 }
 
 /* Login wachtwoord  */
 
-#login form fieldset [type=password] {
+section#login form fieldset [type=password] {
     margin-bottom: 1em;
     margin-left: 2em;
     padding: .5em;
@@ -440,17 +442,17 @@ img[title="like"] {
     position: relative;
 }
 
-#login form fieldset [type=password]:hover {
+section#login form fieldset [type=password]:hover {
     border: .1em solid #2800a0;
     border-width: .12em;
 }
 
-#login form fieldset [type=password]:valid {
+section#login form fieldset [type=password]:valid {
     border-color: #00d66c;
     border-width: .2em;
 }
 
-#login form fieldset input[type=email]:valid:hover {
+section#login form fieldset input[type=email]:valid:hover {
     border-color: #00d66c;
     border-width: .12em;
 }
@@ -476,38 +478,38 @@ input:focus + .tooltip {
 
 /* Login Links  */
 
-#login form fieldset a {
+section#login form fieldset a {
     text-decoration: none;
     color: #2800a0;
     position: relative;
 }
 
-#login form fieldset a:hover {
+section#login form fieldset a:hover {
     text-decoration: none;
     color: #ff3268;
 }
 
-#login form fieldset a:nth-of-type(1) {
+section#login form fieldset a:nth-of-type(1) {
     background-color: #ffffff;
     text-align: center;
     padding-top: 2.1em;
     padding-bottom: .5em;
 }
 
-#login form fieldset a:nth-of-type(1)::before {
+section#login form fieldset a:nth-of-type(1)::before {
     content: "> ";
     position: absolute;
     left: 3.1em;
     transition: all .25s;
 }
 
-#login form fieldset a:nth-of-type(1):hover::before {
+section#login form fieldset a:nth-of-type(1):hover::before {
     content: "> ";
     position: absolute;
     left: 3.5em;
 }
 
-#login form fieldset a:nth-of-type(2) {
+section#login form fieldset a:nth-of-type(2) {
     background-color: #ffffff;
     text-align: center;
     padding-bottom: 1em;
@@ -515,14 +517,14 @@ input:focus + .tooltip {
     border-bottom-right-radius: 1em;
 }
 
-#login form fieldset a:nth-of-type(2)::before {
+section#login form fieldset a:nth-of-type(2)::before {
     content: "> ";
     position: absolute;
     left: 3.8em;
     transition: all .25s;
 }
 
-#login form fieldset a:nth-of-type(2):hover::before {
+section#login form fieldset a:nth-of-type(2):hover::before {
     content: "> ";
     position: absolute;
     left: 4.2em;
@@ -530,7 +532,7 @@ input:focus + .tooltip {
 
 /* Login button  */
 
-#login form fieldset [type=submit] {
+section#login form fieldset [type=submit] {
     font-size: 1.25em;
     background-color: #ff3268;
     color: #ffffff;
@@ -542,7 +544,7 @@ input:focus + .tooltip {
     z-index: 1;
 }
 
-#login form fieldset [type=submit]:hover {
+section#login form fieldset [type=submit]:hover {
     background-color: #ff658e;
 }
 
@@ -557,7 +559,7 @@ section#login img {
 
 /* DETAILPAGINA VAN HET VERHAAL  */
 
-#verhaalintro {
+section#verhaalintro {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -566,7 +568,7 @@ section#login img {
     padding: 5em 0;
 }
 
-#verhaalintro div {
+section#verhaalintro div {
     background-color: rgba(255, 255, 255, .9);
     padding: 2em 0.5em 2em 2em;
     margin: 0 auto;
@@ -574,13 +576,13 @@ section#login img {
     max-width: 20em;
 }
 
-#verhaalintro h1 {
+section#verhaalintro h1 {
     color: #00d66c;
     text-align: left;
     margin: 0 auto;
 }
 
-#verhaalintro h2 {
+section#verhaalintro h2 {
     margin-top: .5em;
     font-style: italic;
     color: #00d66c;
@@ -588,11 +590,11 @@ section#login img {
     margin: 0.5em auto 0 auto;
 }
 
-#verhaalintro img {
+section#verhaalintro img {
     display: none;
 }
 
-#waardering_en_bewaren {
+section#waardering_en_bewaren {
     background-color: #ffffff;
     width: 100%;
     display: flex;
@@ -602,12 +604,12 @@ section#login img {
     margin-top: -1em;
 }
 
-#waardering_en_bewaren h2 {
+section#waardering_en_bewaren h2 {
     color: #2800a0;
     margin: 0 0 .2em .5em;
 }
 
-#waardering_en_bewaren [alt="unlike"] {
+section#waardering_en_bewaren [alt="unlike"] {
     align-self: flex-end;
     margin: 1em .5em .5em .5em;
     width: 3em;
@@ -616,13 +618,13 @@ section#login img {
 
 /* Sterren en cijfer op een rij */
 
-#waardering_en_bewaren div {
+section#waardering_en_bewaren div {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-#waardering_en_bewaren div p {
+section#waardering_en_bewaren div p {
     font-size: 1.3em;
     color: #ffffff;
     background-color: #2800a0;
@@ -631,32 +633,32 @@ section#login img {
     margin: 0 0.3em 0 .5em;
 }
 
-#waardering_en_bewaren div img {
+section#waardering_en_bewaren div img {
     margin: 0 .1em;
     width: 2.5em;
     height: 2.5em;
 }
 
 
-#waardering_en_bewaren p {
+section#waardering_en_bewaren p {
     color: #2800a0;
     margin: .5em 0 0 1em;
 }
 
-#hetverhaal {
+section#hetverhaal {
     margin-top: -1em;
 }
 
-#hetverhaal img[alt="verliefd_mobile"] {
+section#hetverhaal img[alt="verliefd_mobile"] {
     display: block;
     width: 100%;
 }
 
-#hetverhaal img[alt="verliefd_tablet"] {
+section#hetverhaal img[alt="verliefd_tablet"] {
     display: none;
 }
 
-#hetverhaal img[alt="verliefd_desktop"] {
+section#hetverhaal img[alt="verliefd_desktop"] {
     display: none;
 }
 
@@ -740,66 +742,69 @@ section#login img {
     }
 
     /* Inlogpagina formulier  */
-    #login {
+    section#login {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1em;
         height: 70%;
     }
 
-    #login form {
+    section#login form {
         grid-column: 2/3;
         margin-top: auto;
     }
 
     /* DETAILPAGINA VERHAAL  */
-    #verhaalintro {
+    section#verhaalintro {
         grid-column: 1/4;
         margin: -1em 0 0 0;
     }
 
-    #waardering_en_bewaren {
+    section#waardering_en_bewaren {
         grid-column: 1/4;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
     }
 
-    #waardering_en_bewaren h2 {
+    section#waardering_en_bewaren h2 {
         grid-column: 1/2;
     }
 
-    #waardering_en_bewaren [title="unlike"] {
+    section#waardering_en_bewaren [title="unlike"] {
         grid-column: 2/3;
         margin: .5em .5em 0 auto;
     }
 
     /* Sterren en cijfer op een rij */
-    #waardering_en_bewaren div {
+    section#waardering_en_bewaren div {
         grid-column: 1/2;
     }
 
-    #waardering_en_bewaren p {
+    section#waardering_en_bewaren p {
         grid-column: 1/2;
     }
 
-    #hetverhaal {
+    section#hetverhaal {
         width: 100%;
         grid-column: 1/4;
     }
 
-    #hetverhaal img[alt="verliefd_mobile"] {
+    section#hetverhaal img[alt="verliefd_mobile"] {
         display: none;
     }
 
-    #hetverhaal img[alt="verliefd_tablet"] {
+    section#hetverhaal img[alt="verliefd_tablet"] {
         display: block;
         width: 100%;
     }
 
-    #hetverhaal img[alt="verliefd_desktop"] {
+    section#hetverhaal img[alt="verliefd_desktop"] {
         display: none;
     }
+
+
+
 }
 
 @media all and (min-width: 50em) {
@@ -923,50 +928,50 @@ section#login img {
 
 
     /* DETAILPAGINA VAN HET VERHAAL  */
-    #verhaalintro {
+    section#verhaalintro {
         grid-column: 1/4;
     }
 
 
-    #waardering_en_bewaren {
+    section#waardering_en_bewaren {
         grid-column: 1/4;
         display: grid;
         grid-template-columns: 5% 1fr 1fr 5%;
         grid-gap: 1em;
     }
 
-    #waardering_en_bewaren h2 {
+    section#waardering_en_bewaren h2 {
         grid-column: 2/3;
     }
 
-    #waardering_en_bewaren [title="unlike"] {
+    section#waardering_en_bewaren [title="unlike"] {
         grid-column: 3/4;
         margin: .5em .5em 0 auto;
     }
 
     /* Sterren en cijfer op een rij */
-    #waardering_en_bewaren div {
+    section#waardering_en_bewaren div {
         grid-column: 2/3;
     }
 
-    #waardering_en_bewaren p {
+    section#waardering_en_bewaren p {
         grid-column: 2/3;
     }
 
-    #hetverhaal {
+    section#hetverhaal {
         width: 100%;
         grid-column: 2/3;
     }
 
-    #hetverhaal img[alt="verliefd_mobile"] {
+    section#hetverhaal img[alt="verliefd_mobile"] {
         display: none;
     }
 
-    #hetverhaal img[alt="verliefd_tablet"] {
+    section#hetverhaal img[alt="verliefd_tablet"] {
         display: none;
     }
 
-    #hetverhaal img[alt="verliefd_desktop"] {
+    section#hetverhaal img[alt="verliefd_desktop"] {
         display: block;
         width: 100%;
     }
