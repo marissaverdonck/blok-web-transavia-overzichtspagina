@@ -809,6 +809,7 @@ section#login img {
         grid-template-columns: 5% 1fr 5%;
         grid-gap: 1em;
     }
+
     header {
         grid-column: 1/4;
     }
