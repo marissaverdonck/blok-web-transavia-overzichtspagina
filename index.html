@@ -19,13 +19,16 @@
                 <li>
                     <a href="login.html"> <img src="images/login_icon.png" alt="login_icon"></a></li>
                 <li>
-                    <a href="index.html"> <img src="images/hart.png" alt="favorieten"></a></li>
+                    <a href="favorieten.html"> <img src="images/hart.png" alt="favorieten"></a></li>
             </ul>
         </nav>
     </header>
 
     <section id="intro">
         <h1> Verhalen voor onderweg</h1>
+        <h2> 99 Verhalen</h2>
+        <h2> Kies zelf de sfeer</h2>
+        <img src="images/logo_Tekengebied%201.png" title="logo Transavia" alt="logo Transavia" />
     </section>
 
     <!-- Top 5 verhalen -->
@@ -33,8 +36,7 @@
         <h2> Best gewaardeerde verhalen </h2>
         <div>
 
-            <!--Joost: Zet een link om de articles zodat de verhalen klikbaar zijn..-->
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article>
                     <img src="images/verliefd.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
@@ -44,7 +46,7 @@
                 </article>
             </a>
 
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article><img src="images/decock.jpeg" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
@@ -52,7 +54,7 @@
                 </article>
             </a>
 
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article><img src="images/onomatopee.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
                     <img src="images/unlike.png" title="unlike" alt="unlike">
@@ -60,7 +62,7 @@
                 </article>
             </a>
 
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article>
                     <img src="images/stoned.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
@@ -70,8 +72,7 @@
                 </article>
             </a>
 
-
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article>
                     <img src="images/poepen.jpeg" title="Verliefd" alt="verhaal" />
                     <p>8,3</p>
@@ -81,8 +82,7 @@
                 </article>
             </a>
 
-
-            <a href="index.html">
+            <a href="detailpagina.html">
                 <article>
                     <img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
                     <p>8,3</p>
@@ -99,109 +99,102 @@
     <!-- Filter -->
 
     <section id="Filter">
+
         <h2> Kies een stemming </h2>
         <div>
-            <button> Blij </button>
-            <button> Boos </button>
-            <button> Druk </button>
-            <button> Rustig </button>
-            <button> Vaag </button>
-            <button> Inspirerend </button>
+            <button id="blij"> Blij </button>
+            <button id="boos"> Boos </button>
+            <button id="druk"> Druk </button>
+            <button id="rustig"> Rustig </button>
+            <button id="vaag"> Vaag </button>
+            <button id="inspirerend"> Inspirerend </button>
         </div>
+
+        <h3>99 Resultaten </h3>
 
     </section>
 
+    <!-- Sorteren -->
+    <section id="sorteer">
+        <form action="index.html" method="get">
+            <select>
+                          <option value="sorteer"
+                          disabled="disabled"
+                          selected="selected" > Sorteer</option>
+
+                           <option value="titel_az" > Titel A-Z</option>
+
+                             <option value="tetel_za"> Titel Z-A </option>
+
+                            <option value="waardering"> Waardering </option>
+                        </select>
+        </form>
+    </section>
+
+    <!-- Resultaten -->
     <main>
+
         <section id="Resultaten">
-            <h2>99 Resultaten </h2>
 
-            <!-- Sorteren -->
+            <a href="detailpagina.html">
+                <article><img src="images/decock.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> De Cock en het raadsel van het verdwenen boek </h3>
+                </article>
+            </a>
 
-            <!-- Joost: Geef form een submit button-->
+            <a href="detailpagina.html">
+                <article><img src="images/droom.png" alt="verhaal" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> Droom</h3>
+                </article>
+            </a>
 
-            <form action="index.html" method="get">
-                <h3>Sorteren op:</h3>
+            <a href="detailpagina.html">
+                <article><img src="images/onomatopee.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> Onomatope</h3>
+                </article>
+            </a>
 
+            <a href="detailpagina.html">
+                <article><img src="images/poepen.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3>Poepen</h3>
+                </article>
+            </a>
 
-                <!-- Joost: Geef radio buttons hetzelfde name attribute ..zodat ze gegroepeerd zijn, en je daadwerkelijk maar één optie kan kiezen-->
+            <a href="detailpagina.html">
+                <article><img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> Sportcommentaar</h3>
+                </article>
+            </a>
 
-                <input id="titel_az" type="radio" name="sorteren" checked="checked">
-                <label for="titel_az">Titel A-Z</label>
+            <a href="detailpagina.html">
+                <article><img src="images/stoned.jpeg" alt="sportcommentaar" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> Stoned</h3>
+                </article>
+            </a>
 
-
-                <input id="titel_za" type="radio" name="sorteren">
-                <label for="titel_za">Titel Z-A</label>
-
-
-                <input id="waardering" type="radio" name="sorteren">
-                <label for="waardering">Waardering</label>
-
-                <input id="button" type="submit" name="sorteren" value="Sorteer" />
-
-            </form>
-
-
-            <!-- Resultaten -->
-            <div>
-                <a href="index.html">
-                    <article><img src="images/decock.jpeg" alt="verhaal" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> De Cock en het raadsel van het verdwenen boek</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/droom.png" alt="verhaal" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> Droom</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/onomatopee.jpeg" alt="verhaal" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> VOnomatope</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/poepen.jpeg" alt="verhaal" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3>Poepen</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> Sportcommentaar</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/stoned.jpeg" alt="sportcommentaar" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> Stoned</h3>
-                    </article>
-                </a>
-
-                <a href="index.html">
-                    <article><img src="images/verliefd.jpeg" alt="verhaal" />
-                        <p>8,3</p>
-                        <img src="images/unlike.png" title="unlike" alt="unlike">
-                        <h3> Verliefd</h3>
-                    </article>
-                </a>
-            </div>
+            <a href="detailpagina.html">
+                <article><img src="images/verliefd.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+                    <img src="images/unlike.png" title="unlike" alt="unlike">
+                    <h3> Verliefd</h3>
+                </article>
+            </a>
 
         </section>
 
-
     </main>
+
+    <script type="text/javascript" src="script/script.js"></script>
 </body>

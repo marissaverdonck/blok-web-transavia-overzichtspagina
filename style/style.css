@@ -8,17 +8,33 @@
     src: url('Nexa_Regular.ttf');
 }
 
+* {
+    box-sizing: border-box
+}
 
 h1,
 h2,
 h3,
-legend {
-
+h4,
+legend,
+fieldset label {
     font-family: 'Nexa_Bold', 'trebuchet ms', 'sans-serif';
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
 body {
-    color: #274e59;
+    color: #202020;
     width: 100%;
     margin: 0;
     font-family: 'Nexa_Regular', 'trebuchet ms', 'sans-serif';
@@ -32,9 +48,11 @@ header {
     box-shadow: 0 0 0.625em 0 rgba(0, 0, 0, .15);
     padding: .5em 0em 0.3em .5em;
     height: 3em;
-    background-color: #ffff;
-    color: #00d66c;
+    background-color: #ffffff;
+    margin: 0;
+    z-index: 4;
 }
+
 
 header nav ul li a img {
     max-height: 2.3em;
@@ -47,20 +65,17 @@ header nav ul {
 
     list-style: none;
     padding: 0;
-    margin: 0.5em;
+    margin: 0em;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-
 /* Header - logo naar linkerkant van de pagina */
 
 header nav ul li:nth-of-type(1) {
     margin-right: auto;
-
 }
-
 
 /* Section: Sfeerafbeelding en tekst bovenaan pagina */
 
@@ -69,68 +84,76 @@ header nav ul li:nth-of-type(1) {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 21em;
     margin: 0;
-    padding-top: 0.01em;
+    padding: 4em 0;
 }
 
 section#intro h1 {
-    font-size: 2.37em;
     color: #00d66c;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, .9);
     text-align: center;
-    padding: 1em 0.3em;
-    margin: 2em auto;
-    text-align: center;
+    padding: 1em 0.5em 1em .7em;
+    margin: 0 auto;
     border-radius: .5em;
-    max-width: 8em;
+    width: 90%;
+    max-width: 10em;
     word-wrap: break-word;
+}
 
+section#intro h2 {
+    color: #ffffff;
+    text-align: left;
+    padding: 1em 0.3em 1em .7em;
+    margin: 0.5em auto;
+    border-radius: .5em;
+    max-width: 10em;
+    word-wrap: break-word;
+}
 
+section#intro h2:nth-of-type(1) {
+    background-color: rgba(0, 214, 108, .9);
+}
+
+section#intro h2:nth-of-type(2) {
+    background-color: rgba(40, 0, 160, .9);
+}
+
+section#intro img {
+    display: none;
 }
 
 /* Section: Top 5 Best gewaardeerd */
 
 section#best_gewaardeerd {
     background-color: #f3e5d8;
-    margin-bottom: 2em;
-
+    padding-bottom: 2em;
 }
 
 section#best_gewaardeerd h2 {
     color: #2800a0;
-    font-size: 1.8em;
     padding: 1em 0.5em 0.5em 0.5em;
     margin: 0em;
 }
 
-
 section#best_gewaardeerd article {
-    margin: 0.3em;
+    margin: 0.5em;
     position: relative;
-    background-color: #ffffff;
-    border-radius: .75em;
-    min-height: 19em;
-    width: 19em;
-
+    width: 18em;
 }
-
 
 section#best_gewaardeerd article img {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
-    height: 15em;
     width: 100%;
-
 }
 
 /* Best gewaardeerd - Rating */
 
 section#best_gewaardeerd article p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #ffffff;
     background-color: #00d66c;
-    padding: 0.2em;
+    padding: 0.3em .3em 0 .3em;
     position: absolute;
     margin: -9.5em .5em;
     border-radius: .5em;
@@ -140,12 +163,10 @@ section#best_gewaardeerd article p {
 
 section#best_gewaardeerd article img[title="unlike"] {
     max-width: 3em;
-    max-height: 3em;
     position: absolute;
     transition: .3s linear;
-    top: 1em;
+    top: 0.5em;
     right: 1em;
-
 }
 
 /* Best gewaardeerd - Titel */
@@ -155,11 +176,14 @@ section#best_gewaardeerd a {
 }
 
 section#best_gewaardeerd article h3 {
+    background-color: #ffffff;
     color: #2800a0;
     font-size: 1.35em;
     word-wrap: break-word;
-    margin: 0.5em;
-
+    padding: 0.5em 0.5em 1em 0.5em;
+    margin-top: -0.4em;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
 }
 
 /* Best gewaardeerd - Artikelen op een rij */
@@ -172,38 +196,32 @@ section#best_gewaardeerd div {
     text-decoration: none;
 }
 
-
 /* Filter */
 
 section#Filter {
     background-color: #ffffff;
-    padding-bottom: 2em;
     position: relative;
-
-
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 section#Filter h2 {
-    background-color: #ffffff;
     color: #00d66c;
-    padding: 1em 0.5em 0.5em 0.5em;
-    margin: 0em;
-    font-size: 1.8em;
-
+    padding: 0;
+    margin: .5em 0 .5em .5em;
 }
 
-
 section#Filter button {
-    font-size: 1.25em;
+    font-size: 1.3em;
     background-color: #ff3268;
     color: #ffffff;
-    /* Bron: https://www.transavia.com*/
-    padding: .4375em 1.5em .5625em;
+    padding: 0.4em .9em 0.5em .9em;
     border-radius: 1.25em;
     box-shadow: inset 0 -.1875rem .0625rem #ca2b55;
     transition: .3s linear;
-    margin: 0em -0.5em 0.3em 0.5em;
-
+    margin-right: 0.3em;
+    border: none;
+    white-space: nowrap;
 }
 
 section#Filter button:hover {
@@ -211,11 +229,19 @@ section#Filter button:hover {
 }
 
 section#Filter button:active {
-    background-color: #ff3268;
-    /* Bron: https://www.transavia.com*/
+    background-color: #ca2b55;
+    box-shadow: inset 0 0.1875rem 0.0625rem #ca2b55;
+
+}
+
+section#Filter button.active {
+    background-color: #ff8baa;
     box-shadow: inset 0 0.1875rem 0.0625rem #ca2b55;
 }
 
+section#Filter button:nth-of-type(1) {
+    margin-left: .5em;
+}
 
 section#Filter div {
     margin-left: -0.5em;
@@ -225,113 +251,85 @@ section#Filter div {
     text-decoration: none;
 }
 
+section#Filter h3 {
+    text-align: center;
+    color: #2800a0;
+    font-size: 1.25em;
+    padding: 0;
+    margin: .8em 0 .8em .5em;
+}
+
+/* sorteren  */
+
+section#sorteer {
+    background-color: #f3e5d8;
+    display: flex;
+    Justify-content: flex-end;
+    padding: .8em;
+}
+
+
+section#sorteer form select {
+    font-size: 1em;
+    background-color: #00d66c;
+    color: #ffffff;
+    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
+    transition: .3s linear;
+    border: none;
+    width: 6em;
+    height: 2em;
+}
+
+section#sorteer form select:hover {
+    background-color: #4de298;
+}
+
+section#sorteer form select:active {
+    background-color: #00d66c;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
 
 /* Resultaten */
 
 section#Resultaten {
+    transition: all .5s;
     background-color: #f3e5d8;
 }
 
-
-section#Resultaten h2 {
-    color: #2800a0;
-    font-size: 1.8em;
-    padding: 1em 0.5em 0.5em 0.5em;
-    margin: 0em;
-}
-
-/* Resultaten - Sorteren */
-
-section#Resultaten form {
-
-    background-color: rgba(255, 255, 255, .7);
-    border-radius: .75em;
-    margin: 0 0.5em;
-    padding-bottom: 0.5em;
-}
-
-section#Resultaten form h3 {
-    color: #00d66c;
-    margin-left: 0.5em;
-    padding-top: 0.5em;
-    margin-top: 0;
-}
-
-section#Resultaten form label {
-    color: #202020;
-    font-size: 1em;
-    margin-left: -.2em
-}
-
-section#Resultaten form input {
-    margin-left: 1em
-}
-
-section#Resultaten form [type=submit] {
-    font-size: 1.25em;
-    background-color: #00d66c;
-    color: #ffffff;
-    /* Bron: https://www.transavia.com*/
-    padding: .4375em 1.5em .5625em;
-    border-radius: 1.25em;
-    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
-    transition: .3s linear;
-    margin: 0em -0.5em 0.3em 0.5em;
-}
-
-section#Resultaten form [type=submit]:hover {
-    background-color: #4de298;
-}
-
-section#Resultaten form [type=submit]:active {
-    background-color: #00d66c;
-    /* Bron: https://www.transavia.com*/
-    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
-}
-
-
-/* Resultaten - Verhalen */
 
 section#Resultaten a {
     text-decoration: none;
 }
 
 section#Resultaten article {
-    background-color: #ffffff;
-    border-radius: .75em;
-    max-width: 30em;
     width: 90%;
+    max-width: 22em;
     position: relative;
-    display: block;
-    margin: 1em auto;
-    max-height: 30em;
-
-
+    margin: 0em auto 1em auto;
 }
 
 section#Resultaten article h3 {
     color: #2800a0;
-    font-size: 1.4em;
+    background-color: #ffffff;
     word-wrap: break-word;
-    margin: 0.5em;
-    padding-bottom: 0.5em;
-
+    margin-top: -0.4em;
+    padding: 0.5em 0.5em 1em 0.5em;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
 }
 
 section#Resultaten article img {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
     width: 100%;
-    height: auto;
-    max-height: 18em;
     overflow: hidden;
 }
 
 section#Resultaten article p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #ffffff;
     background-color: #00d66c;
-    padding: 0.2em;
+    padding: 0.3em .3em 0 .3em;
     margin: 0;
     position: absolute;
     border-radius: .5em;
@@ -340,61 +338,635 @@ section#Resultaten article p {
 }
 
 
-section#Resultaten article img[title="unlike"] {
+section#Resultaten article img[title="unlike"],
+img[title="like"] {
     max-width: 3em;
-    max-height: 3em;
     position: absolute;
     transition: .3s linear;
     top: 0.5em;
     right: 0.5em;
 }
 
-
 /* Inlogpagina formulier  */
-
-#login form {
-    border-radius: 1em;
-
-}
-
-#login fieldset {
-    display: block;
-    background-color: #f3e5d8;
-    width: 30em;
-    margin: 3em auto;
-}
-
-#login fieldset legend {
-    display: block;
-    background-color: #ffffff;
-    width: 100%;
-    font-size: 2.37em;
-    color: #00d66c;
-    padding: 0.5em 0em;
-
-}
-
-#login fieldset {
-    background-color: #f3e5d8;
-    width: 30em;
-    margin: 3em auto;
-    padding: 0;
-    border: none;
-}
-
-#login fieldset label {
-    margin: 2em 0em;
-
-}
 
 #login {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 21em;
-    margin: 0;
-    padding-top: 0.01em;
+    ;
+    position: fixed;
+    padding: 3em 0;
+    margin-top: -1em;
+}
 
+
+#login form fieldset {
+    background-color: rgba(247, 246, 247, .8);
+    border: none;
+    margin: 3em auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 18em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+
+/* Login titel  */
+
+#login form fieldset legend {
+    background-color: #ffffff;
+    font-size: 2.37em;
+    color: #00d66c;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    margin: 0 0 0 -.01em;
+    padding: .5em 4.5em .5em .7em;
+}
+
+/* Login tekst  */
+
+#login form fieldset p {
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+}
+
+/* Login invulvelden  */
+
+#login form fieldset label {
+    margin: 1em 0 .3em 1.5em;
+}
+
+/* Login e-mail  */
+
+#login form fieldset [type=email] {
+    margin-bottom: 1em;
+    margin-left: 2em;
+    padding: .5em;
+    width: 70%;
+    border-radius: .5em;
+    border: .1em solid #91a3b7;
+    font-family: 'Nexa_Regular', 'trebuchet ms', 'sans-serif';
+    font-size: 80%;
+}
+
+#login form fieldset [type=email]:hover {
+    border: .1em solid #2800a0;
+    border-width: .12em;
+}
+
+#login form fieldset [type=email]:valid {
+    border-color: #00d66c;
+    border-width: .2em;
+}
+
+#login form fieldset input[type=email]:valid:hover {
+    border-color: #00d66c;
+    border-width: .12em;
+}
+
+/* Login wachtwoord  */
+
+#login form fieldset [type=password] {
+    margin-bottom: 1em;
+    margin-left: 2em;
+    padding: .5em;
+    width: 70%;
+    border-radius: .5em;
+    border: .1em solid #91a3b7;
+    font-size: 80%;
+    position: relative;
+}
+
+#login form fieldset [type=password]:hover {
+    border: .1em solid #2800a0;
+    border-width: .12em;
+}
+
+#login form fieldset [type=password]:valid {
+    border-color: #00d66c;
+    border-width: .2em;
+}
+
+#login form fieldset input[type=email]:valid:hover {
+    border-color: #00d66c;
+    border-width: .12em;
+}
+
+.tooltip {
+    transition: all .2s;
+    opacity: 0;
+    width: 16em;
+    padding: .5em;
+    border-radius: .5em;
+    border: .1em solid #91a3b7;
+    font-size: 80%;
+    margin-top: -3em;
+    background-color: #ffffff;
+    color: #606060;
+}
+
+input:focus + .tooltip {
+    display: block;
+    opacity: 1;
+    margin-top: -1em;
+}
+
+/* Login Links  */
+
+#login form fieldset a {
+    text-decoration: none;
+    color: #2800a0;
+    position: relative;
+}
+
+#login form fieldset a:hover {
+    text-decoration: none;
+    color: #ff3268;
+}
+
+#login form fieldset a:nth-of-type(1) {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 2.1em;
+    padding-bottom: .5em;
+}
+
+#login form fieldset a:nth-of-type(1)::before {
+    content: "> ";
+    position: absolute;
+    left: 3.1em;
+    transition: all .25s;
+}
+
+#login form fieldset a:nth-of-type(1):hover::before {
+    content: "> ";
+    position: absolute;
+    left: 3.5em;
+}
+
+#login form fieldset a:nth-of-type(2) {
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#login form fieldset a:nth-of-type(2)::before {
+    content: "> ";
+    position: absolute;
+    left: 3.8em;
+    transition: all .25s;
+}
+
+#login form fieldset a:nth-of-type(2):hover::before {
+    content: "> ";
+    position: absolute;
+    left: 4.2em;
+}
+
+/* Login button  */
+
+#login form fieldset [type=submit] {
+    font-size: 1.25em;
+    background-color: #ff3268;
+    color: #ffffff;
+    padding: .4375em 1.5em .5625em;
+    border-radius: 1.25em;
+    box-shadow: inset 0 -.1875rem .0625rem #ca2b55;
+    transition: .3s linear;
+    margin: 0 auto -1.1em auto;
+    z-index: 1;
+}
+
+#login form fieldset [type=submit]:hover {
+    background-color: #ff658e;
+}
+
+#login form fieldset [type=submit]:active {
+    background-color: #ff3268;
+    box-shadow: inset 0 0.1875rem 0.0625rem #ca2b55;
+}
+
+section#login img {
+    display: none;
+}
+
+/* DETAILPAGINA VAN HET VERHAAL  */
+
+#verhaalintro {
+    background-image: url("../images/beach.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+    padding: 5em 0;
+}
+
+#verhaalintro div {
+    background-color: rgba(255, 255, 255, .9);
+    padding: 2em 0.5em 2em 2em;
+    margin: 0 auto;
+    border-radius: .5em;
+    max-width: 20em;
+}
+
+#verhaalintro h1 {
+    color: #00d66c;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#verhaalintro h2 {
+    margin-top: .5em;
+    font-style: italic;
+    color: #00d66c;
+    text-align: left;
+    margin: 0.5em auto 0 auto;
+}
+
+#verhaalintro img {
+    display: none;
+}
+
+#waardering_en_bewaren {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 3em;
+    margin-top: -1em;
+}
+
+#waardering_en_bewaren h2 {
+    color: #2800a0;
+    margin: 0 0 .2em .5em;
+}
+
+#waardering_en_bewaren [alt="unlike"] {
+    align-self: flex-end;
+    margin: 1em .5em .5em .5em;
+    width: 3em;
+    height: 3em;
+}
+
+/* Sterren en cijfer op een rij */
+
+#waardering_en_bewaren div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#waardering_en_bewaren div p {
+    font-size: 1.3em;
+    color: #ffffff;
+    background-color: #2800a0;
+    padding: 0.5em .3em 0.2em .3em;
+    border-radius: .5em;
+    margin: 0 0.3em 0 .5em;
+}
+
+#waardering_en_bewaren div img {
+    margin: 0 .1em;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+
+#waardering_en_bewaren p {
+    color: #2800a0;
+    margin: .5em 0 0 1em;
+}
+
+#hetverhaal {
+    margin-top: -1em;
+}
+
+#hetverhaal img[alt="verliefd_mobile"] {
+    display: block;
+    width: 100%;
+}
+
+#hetverhaal img[alt="verliefd_tablet"] {
+    display: none;
+}
+
+#hetverhaal img[alt="verliefd_desktop"] {
+    display: none;
+}
+
+@media all and (min-width: 30em) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1% 1fr 1%;
+        grid-gap: 1em;
+    }
+
+    header {
+        grid-column: 1/4;
+    }
+
+    section#intro {
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+        margin: -1em 0 0 0;
+    }
+
+    section#intro h1 {
+        grid-area: 1 / 2 / 3 / 4;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 0 0;
+        width: 90%;
+    }
+
+    section#intro h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+        max-width: 6em;
+    }
+
+    section#intro h2:nth-child(2) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    section#intro h2:nth-child(1) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    section#best_gewaardeerd {
+        grid-column: 1/4;
+        overflow: hidden;
+    }
+
+    section#Filter {
+        grid-column: 1/4;
+    }
+
+    section#sorteer {
+        grid-column: 2/3;
+    }
+
+    main {
+        grid-column: 2/3;
+    }
+
+    section#Resultaten {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten a {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten a article {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    /* Inlogpagina formulier  */
+    #login {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        height: 70%;
+    }
+
+    #login form {
+        grid-column: 2/3;
+        margin-top: auto;
+    }
+
+    /* DETAILPAGINA VERHAAL  */
+    #verhaalintro {
+        grid-column: 1/4;
+        margin: -1em 0 0 0;
+    }
+
+    #waardering_en_bewaren {
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    #waardering_en_bewaren h2 {
+        grid-column: 1/2;
+    }
+
+    #waardering_en_bewaren [title="unlike"] {
+        grid-column: 2/3;
+        margin: .5em .5em 0 auto;
+    }
+
+    /* Sterren en cijfer op een rij */
+    #waardering_en_bewaren div {
+        grid-column: 1/2;
+    }
+
+    #waardering_en_bewaren p {
+        grid-column: 1/2;
+    }
+
+    #hetverhaal {
+        width: 100%;
+        grid-column: 1/4;
+    }
+
+    #hetverhaal img[alt="verliefd_mobile"] {
+        display: none;
+    }
+
+    #hetverhaal img[alt="verliefd_tablet"] {
+        display: block;
+        width: 100%;
+    }
+
+    #hetverhaal img[alt="verliefd_desktop"] {
+        display: none;
+    }
+}
+
+@media all and (min-width: 50em) {
+
+    body {
+        display: grid;
+        grid-template-columns: 5% 1fr 5%;
+        grid-gap: 1em;
+    }
+    header {
+        grid-column: 1/4;
+    }
+
+    section#intro {
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#intro h1 {
+        grid-area: 1 / 2 / 3 / 3;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        width: 90%;
+    }
+
+    section#intro h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+        max-width: 6em;
+        justify-content: center;
+    }
+
+    section#intro h2:nth-child(2) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    section#intro h2:nth-child(1) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    section#intro img {
+        display: flex;
+        grid-area: 1 / 3 / 3 / 4;
+        width: 40%;
+        max-width: 10em;
+        margin: 0 0 0 2em;
+    }
+
+    section#best_gewaardeerd {
+        grid-column: 2/3;
+        overflow: hidden;
+    }
+
+    section#Filter {
+        grid-column: 1/4;
+        grid-template-columns: 5% 1fr 5%;
+        display: grid;
+    }
+
+    section#Filter h2 {
+        grid-column: 2/3;
+    }
+
+    section#Filter div {
+        grid-column: 2/3;
+    }
+
+    section#Filter h3 {
+        grid-column: 2/3;
+    }
+
+    section#sorteer {
+        grid-column: 2/3;
+    }
+
+    main {
+        grid-column: 2/3;
+    }
+
+    section#Resultaten {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten a {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten a article {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    /* Inlogpagina formulier  */
+    section#login {
+        height: 70%;
+    }
+    section#login form {
+        margin-top: auto;
+    }
+
+    /* Inlogpagina logo */
+    section#login img {
+        display: flex;
+        grid-area: 1 / 3 / 3 / 4;
+        width: 40%;
+        max-width: 10em;
+        margin: 3em 0 0 2em;
+    }
+
+
+    /* DETAILPAGINA VAN HET VERHAAL  */
+    #verhaalintro {
+        grid-column: 1/4;
+    }
+
+
+    #waardering_en_bewaren {
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 5%;
+        grid-gap: 1em;
+    }
+
+    #waardering_en_bewaren h2 {
+        grid-column: 2/3;
+    }
+
+    #waardering_en_bewaren [title="unlike"] {
+        grid-column: 3/4;
+        margin: .5em .5em 0 auto;
+    }
+
+    /* Sterren en cijfer op een rij */
+    #waardering_en_bewaren div {
+        grid-column: 2/3;
+    }
+
+    #waardering_en_bewaren p {
+        grid-column: 2/3;
+    }
+
+    #hetverhaal {
+        width: 100%;
+        grid-column: 2/3;
+    }
+
+    #hetverhaal img[alt="verliefd_mobile"] {
+        display: none;
+    }
+
+    #hetverhaal img[alt="verliefd_tablet"] {
+        display: none;
+    }
+
+    #hetverhaal img[alt="verliefd_desktop"] {
+        display: block;
+        width: 100%;
+    }
 
 }
