@@ -9,7 +9,8 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+
 }
 
 h1,
@@ -22,14 +23,18 @@ fieldset label {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
 }
 
 h2 {
-    font-size: 1.7em;
+    font-size: 2.5em;
 }
 
 h3 {
+    font-size: 1.7em;
+}
+
+h4 {
     font-size: 1.25em;
 }
 
@@ -38,34 +43,73 @@ body {
     width: 100%;
     margin: 0;
     font-family: 'Nexa_Regular', 'trebuchet ms', 'sans-serif';
-    background-color: #f3e5d8;
+    background-color: #ffffff;
 }
 
 
-/* Menu bovenaan de pagina */
+/* Header Menu*/
 
 header {
     box-shadow: 0 0 0.625em 0 rgba(0, 0, 0, .15);
-    padding: .5em 0em 0.3em .5em;
-    height: 3em;
+    padding: .7em 0em .7em 1em;
     background-color: #ffffff;
     margin: 0;
-    z-index: 4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
-
 
 header nav ul li a img {
-    max-height: 2.3em;
-    margin-right: 0.7em;
+    max-height: 1.6em;
+    margin-right: 1.2em;
+    display: block;
 }
 
-/* Header - iconen naar rechterkant van de pagina */
+header nav ul li a img:hover {
+    opacity: .6;
+    transition: .2s linear;
+}
+
+header nav ul li a:focus {
+    opacity: .6;
+    transition: .2s linear;
+}
+
+
+header nav ul li a img[alt="logo_transavia"] {
+    max-height: 2em;
+}
+
+header nav ul li:nth-child(3){
+    position: relative;}
+
+header nav ul li img[alt="plus"]{
+    width: .5em;
+    opacity: 0;
+}
+
+header nav ul li img[alt="plus"].aan{
+    width: 1.3em;
+    opacity: 1;
+    transition:.5s linear;
+    transform: scale(1.3);
+}
+
+
+header nav ul li:nth-child(4){
+position: absolute;
+    top:1.5em;
+    right:.6em;
+}
+
+/* Header- iconen naar rechterkant van de pagina */
 
 header nav ul {
 
     list-style: none;
     padding: 0;
-    margin: 0em;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -77,44 +121,44 @@ header nav ul li:nth-of-type(1) {
     margin-right: auto;
 }
 
-/* Section: Sfeerafbeelding en tekst bovenaan pagina */
+/* Section Intro: Sfeerafbeelding en tekst bovenaan pagina */
 
 section#intro {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    margin: 0;
-    padding: 4em 0;
-}
-
-section#intro h1 {
-    color: #00d66c;
-    background-color: rgba(255, 255, 255, .9);
-    text-align: center;
-    padding: 1em 0.5em 1em .7em;
-    margin: 0 auto;
-    border-radius: .5em;
-    width: 90%;
-    max-width: 10em;
-    word-wrap: break-word;
+    margin: 0em;
+    padding: 5em 0;
 }
 
 section#intro h2 {
+    color: #00d66c;
+    background-color: rgba(255, 255, 255, .9);
+    text-align: left;
+    padding: 0.6em 0.5em;
+    margin: 0 auto;
+    border-radius: .5em;
+    width: 90%;
+    max-width: 8em;
+    word-wrap: break-word;
+}
+
+section#intro h3 {
     color: #ffffff;
     text-align: left;
-    padding: 1em 0.3em 1em .7em;
+    padding: .8em .3em .8em .7em;
     margin: 0.5em auto;
     border-radius: .5em;
     max-width: 10em;
     word-wrap: break-word;
 }
 
-section#intro h2:nth-of-type(1) {
+section#intro h3:nth-of-type(1) {
     background-color: rgba(0, 214, 108, .9);
 }
 
-section#intro h2:nth-of-type(2) {
+section#intro h3:nth-of-type(2) {
     background-color: rgba(40, 0, 160, .9);
 }
 
@@ -122,29 +166,48 @@ section#intro img {
     display: none;
 }
 
-/* Section: Top 5 Best gewaardeerd */
+/* Section: Best gewaardeerd */
 
-section#best_gewaardeerd article a {
-    background-color: #ffffff;
-    padding-bottom: 2em;
-}
-
-section#best_gewaardeerd h2 {
-    color: #2800a0;
-    padding: 1em 0.5em 0.5em 0.5em;
-    margin: 0em;
+section#best_gewaardeerd {
+    background-color: #f3e5d8;
+    padding: 3em 1em;
 }
 
 section#best_gewaardeerd article {
     margin: 0.5em;
     position: relative;
-
 }
+
+section#best_gewaardeerd article a {
+    background-color: #ffffff;
+}
+
+section#best_gewaardeerd a:hover {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#best_gewaardeerd a:focus {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#best_gewaardeerd article:active {
+    margin-top: -0.01em;
+    transition: .3s linear;
+}
+
+section#best_gewaardeerd h3 {
+    color: #2800a0;
+    margin: 0em;
+}
+
 
 section#best_gewaardeerd article a img {
     border-top-left-radius: .75em;
     border-top-right-radius: .75em;
-    width: 18em;
+    width: 16em;
+    margin-bottom: -2.3em;
 }
 
 /* Best gewaardeerd - Rating */
@@ -152,40 +215,66 @@ section#best_gewaardeerd article a img {
 section#best_gewaardeerd article a p {
     font-size: 1.3em;
     color: #ffffff;
-    background-color: #00d66c;
+    background-color: #2800a0;
     padding: 0.3em .3em 0 .3em;
     position: absolute;
-    margin: -9.5em .5em;
+    margin: -7em .5em;
     border-radius: .5em;
 }
 
-/* Best gewaardeerd - Like button */
+/* Best gewaardeerd - Bewaar button */
 
-section#best_gewaardeerd article img[title="unlike"] {
-    max-width: 3em;
+section#best_gewaardeerd article button img[title="bewaren"] {
+    max-width: 3.5em;
+    border-radius: .75em;
+}
+
+section#best_gewaardeerd article button {
     position: absolute;
     transition: .3s linear;
-    top: 0.5em;
+    top: 0.8em;
     right: 1em;
-
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
 }
+
+section#best_gewaardeerd article button img[title="bewaren"]:hover {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#best_gewaardeerd article button:focus {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
 
 /* Best gewaardeerd - Titel */
 
 section#best_gewaardeerd article a {
     text-decoration: none;
-
 }
 
-section#best_gewaardeerd article a h3 {
+section#best_gewaardeerd article a h4 {
     background-color: #ffffff;
     color: #2800a0;
     font-size: 1.35em;
     word-wrap: break-word;
-    padding: 0.5em 0.5em 1em 0.5em;
-    margin-top: -0.4em;
+    padding: 0.7em 0.5em 1em 0.5em;
     border-bottom-left-radius: .75em;
     border-bottom-right-radius: .75em;
+}
+
+section#best_gewaardeerd article a h4:hover {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#best_gewaardeerd article a h4:focus {
+    opacity: .6;
+    transition: .4s linear;
 }
 
 /* Best gewaardeerd - Artikelen op een rij */
@@ -198,19 +287,17 @@ section#best_gewaardeerd div {
     text-decoration: none;
 }
 
-/* Filter */
+/* Section: Filter */
 
 section#Filter {
     background-color: #ffffff;
     position: relative;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    margin: 1.5em 1em 0 1em;
 }
 
-section#Filter h2 {
+section#Filter h3 {
     color: #00d66c;
-    padding: 0;
-    margin: .5em 0 .5em .5em;
+    margin-bottom: .8em
 }
 
 section#Filter button {
@@ -230,10 +317,13 @@ section#Filter button:hover {
     background-color: #ff658e;
 }
 
+section#Filter button:focus {
+    background-color: #ff658e;
+}
+
 section#Filter button:active {
     background-color: #ca2b55;
     box-shadow: inset 0 0.1875rem 0.0625rem #ca2b55;
-
 }
 
 section#Filter button.active {
@@ -246,61 +336,108 @@ section#Filter button:nth-of-type(1) {
 }
 
 section#Filter div {
-    margin-left: -0.5em;
+    display: flex;
+    justify-content: left;
+    overflow-x: scroll;
+    text-decoration: none;
+    margin-left: -.5em;
+    margin-top: 1em;
+}
+
+/* sorteren  */
+
+section#sorteer {
+    margin: 0 1em 1em 1em;
+    padding: 0;
+}
+
+section#sorteer h4 {
+    text-align: right;
+    color: #00d66c;
+    padding: 1em 0 0 0;
+    margin: 0.5em;
+}
+
+section#sorteer h3 {
+    color: #2800a0;
+    text-align: left;
+    margin-bottom: .8em
+}
+
+section#sorteer button {
+    font-size: 1em;
+    background-color: #2800a0;
+    color: #ffffff;
+    padding: 0.4em .9em 0.5em .9em;
+    border-radius: 1.25em;
+    box-shadow: inset 0 -.1875rem .0625rem #120145;
+    transition: .3s linear;
+    margin-right: 0.3em;
+    border: none;
+    white-space: nowrap;
+}
+
+section#sorteer button.aan {
+    background-color: #120145;
+    box-shadow: inset 0 .1875rem .0625rem #120145;
+}
+
+section#sorteer button:hover {
+    background-color: #5e40b8;
+    box-shadow: inset 0 -.1875rem .0625rem #2800a0;
+}
+
+section#sorteer button:focus {
+    background-color: #5e40b8;
+    box-shadow: inset 0 -.1875rem .0625rem #2800a0;
+}
+
+section#sorteer button:active {
+
+    background-color: #120145;
+    box-shadow: inset 0 .1875rem .0625rem #2800a0;
+}
+
+section#sorteer button.active {
+
+    background-color: #1e9162;
+    box-shadow: inset 0 .1875rem .0625rem #1e9162;
+}
+
+
+section#sorteer div {
     display: flex;
     justify-content: left;
     overflow-x: scroll;
     text-decoration: none;
 }
 
-section#Filter h3 {
-    text-align: center;
-    color: #2800a0;
-    font-size: 1.25em;
-    padding: 0;
-    margin: .8em 0 .8em .5em;
-}
-
-/* sorteren  */
-
-section#sorteer {
-    background-color: #f3e5d8;
-    display: flex;
-    Justify-content: flex-end;
-    padding: .8em;
-}
-
-
-section#sorteer form select {
-    font-size: 1em;
-    background-color: #00d66c;
-    color: #ffffff;
-    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
-    transition: .3s linear;
-    border: none;
-    width: 6em;
-    height: 2em;
-}
-
-section#sorteer form select:hover {
-    background-color: #4de298;
-}
-
-section#sorteer form select:active {
-    background-color: #00d66c;
-    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
-}
-
 /* Resultaten */
 
 section#Resultaten {
-    transition: all .5s;
-    background-color: #f3e5d8;
+    transition: .5s linear;
+    padding: 1.5em 0;
+    border-radius: .75em;
+    background-color: #f7f7f7;
 }
-
 
 section#Resultaten a {
     text-decoration: none;
+}
+
+section#Resultaten a:hover {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#Resultaten a:focus {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#Resultaten article:active {
+    margin-top: -.3em;
+    transition: .3s linear;
 }
 
 section#Resultaten article {
@@ -310,7 +447,7 @@ section#Resultaten article {
     margin: 0em auto 1em auto;
 }
 
-section#Resultaten article h3 {
+section#Resultaten article h4 {
     color: #2800a0;
     background-color: #ffffff;
     word-wrap: break-word;
@@ -330,7 +467,7 @@ section#Resultaten article img:nth-child(1) {
 section#Resultaten article p {
     font-size: 1.3em;
     color: #ffffff;
-    background-color: #00d66c;
+    background-color: #2800a0;
     padding: 0.3em .3em 0 .3em;
     margin: 0;
     position: absolute;
@@ -340,27 +477,188 @@ section#Resultaten article p {
 }
 
 
-section#Resultaten article img:nth-child(2) {
-    max-width: 3em;
-    position: absolute;
-    transition: .3s linear;
-    top: 0.5em;
-    right: 0.5em;
-
+section#Resultaten article img[title="bewaren"] {
+    max-width: 3.5em;
+    border: none;
+    background: none;
+    border-radius: .75em;
 }
 
-/* Inlogpagina formulier  */
+section#Resultaten article img[title="bewaren"]:hover {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#Resultaten article button:focus {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#Resultaten article button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+section#Resultaten_vs2 a {
+    text-decoration: none;
+}
+
+section#Resultaten_vs2 a:hover {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#Resultaten_vs2 a:focus {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+section#Resultaten_vs2 article:active {
+    margin-top: -.3em;
+    transition: .3s linear;
+}
+
+section#Resultaten_vs2 article {
+    width: 90%;
+    max-width: 22em;
+    position: relative;
+    margin: 0em auto 1em auto;
+}
+
+section#Resultaten_vs2 article h4 {
+    color: #2800a0;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    margin-top: -0.4em;
+    padding: 0.5em 0.5em 1em 0.5em;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+}
+
+section#Resultaten_vs2 article img:nth-child(1) {
+    border-top-left-radius: .75em;
+    border-top-right-radius: .75em;
+    width: 100%;
+    overflow: hidden;
+}
+
+section#Resultaten_vs2 article p {
+    font-size: 1.3em;
+    color: #ffffff;
+    background-color: #2800a0;
+    padding: 0.3em .3em 0 .3em;
+    margin: 0;
+    position: absolute;
+    border-radius: .5em;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+section#Resultaten_vs2 article img[title="bewaren"] {
+    max-width: 3.5em;
+    border: none;
+    background: none;
+    border-radius: .75em;
+}
+
+section#Resultaten article_vs2 img[title="bewaren"]:hover {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#Resultaten article_vs2 button:focus {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#Resultaten_vs2 article button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+section#Resultaten_kleur {
+    transition: .5s linear;
+    padding: 1.5em 0;
+    border-radius: .75em;
+    background: #f7f7f7;
+}
+
+section#Resultaten_kleur a {
+    text-decoration: none;
+}
+
+section#Resultaten_kleur article {
+    width: 90%;
+    max-width: 22em;
+    position: relative;
+    margin: 0em auto 1em auto;
+}
+
+section#Resultaten_kleur article h4 {
+    color: #2800a0;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    margin-top: -0.4em;
+    padding: 0.5em 0.5em 1em 0.5em;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+}
+
+section#Resultaten_kleur article img:nth-child(1) {
+    border-top-left-radius: .75em;
+    border-top-right-radius: .75em;
+    width: 100%;
+    overflow: hidden;
+}
+
+section#Resultaten.uit {
+    display: none;
+}
+
+section#Resultaten_vs2 {
+    display: none;
+}
+
+section#Resultaten_vs2.aan {
+    display: inherit;
+    transition: .8s linear;
+    padding: 1.5em 0;
+    border-radius: .75em;
+        background: #f7f7f7;
+}
+
+section#Resultaten_kleur {
+    display: none;
+}
+
+section#Resultaten_kleur.aan {
+        display: inherit;
+    transition: .8s linear;
+    padding: 1.5em 0;
+    border-radius: .75em;
+}
+
+/* INLOGPAGINA FORMULIER */
 
 section#login {
     background-image: url("../images/beach.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    ;
     position: fixed;
-    padding: 3em 0;
-    margin-top: -1em;
+    padding: 1em 0;
 }
+
 
 
 section#login form fieldset {
@@ -414,6 +712,12 @@ section#login form fieldset [type=email] {
     font-size: 80%;
 }
 
+
+section#login form fieldset input[type=email]:focus {
+    border: .1em solid #2800a0;
+    border-width: .12em;
+}
+
 section#login form fieldset [type=email]:hover {
     border: .1em solid #2800a0;
     border-width: .12em;
@@ -447,6 +751,11 @@ section#login form fieldset [type=password]:hover {
     border-width: .12em;
 }
 
+section#login form fieldset input[type=password]:focus {
+    border: .1em solid #2800a0;
+    border-width: .12em;
+}
+
 section#login form fieldset [type=password]:valid {
     border-color: #00d66c;
     border-width: .2em;
@@ -458,7 +767,7 @@ section#login form fieldset input[type=email]:valid:hover {
 }
 
 .tooltip {
-    transition: all .2s;
+    transition: .2s linear;
     opacity: 0;
     width: 16em;
     padding: .5em;
@@ -500,13 +809,17 @@ section#login form fieldset a:nth-of-type(1)::before {
     content: "> ";
     position: absolute;
     left: 3.1em;
-    transition: all .25s;
+    transition: .25s linear;
 }
 
 section#login form fieldset a:nth-of-type(1):hover::before {
     content: "> ";
     position: absolute;
     left: 3.5em;
+}
+
+section#login form fieldset a:nth-of-type(1):focus {
+    text-decoration: underline;
 }
 
 section#login form fieldset a:nth-of-type(2) {
@@ -521,13 +834,17 @@ section#login form fieldset a:nth-of-type(2)::before {
     content: "> ";
     position: absolute;
     left: 3.8em;
-    transition: all .25s;
+    transition: .25s linear;
 }
 
 section#login form fieldset a:nth-of-type(2):hover::before {
     content: "> ";
     position: absolute;
     left: 4.2em;
+}
+
+section#login form fieldset a:nth-of-type(2):focus {
+    text-decoration: underline;
 }
 
 /* Login button  */
@@ -548,8 +865,12 @@ section#login form fieldset [type=submit]:hover {
     background-color: #ff658e;
 }
 
-#login form fieldset [type=submit]:active {
-    background-color: #ff3268;
+section#login form fieldset input[type=submit]:focus {
+    background-color: #ff658e;
+}
+
+#login form fieldset input[type=submit]:active {
+    background-color: #ca2b55;
     box-shadow: inset 0 0.1875rem 0.0625rem #ca2b55;
 }
 
@@ -559,62 +880,49 @@ section#login img {
 
 /* DETAILPAGINA VAN HET VERHAAL  */
 
-section#verhaalintro {
-    background-image: url("../images/beach.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    margin: 0;
-    padding: 5em 0;
-}
-
-section#verhaalintro div {
-    background-color: rgba(255, 255, 255, .9);
-    padding: 2em 0.5em 2em 2em;
-    margin: 0 auto;
-    border-radius: .5em;
-    max-width: 20em;
-}
-
-section#verhaalintro h1 {
-    color: #00d66c;
-    text-align: left;
-    margin: 0 auto;
-}
-
-section#verhaalintro h2 {
-    margin-top: .5em;
-    font-style: italic;
-    color: #00d66c;
-    text-align: left;
-    margin: 0.5em auto 0 auto;
-}
-
-section#verhaalintro img {
-    display: none;
-}
-
 section#waardering_en_bewaren {
     background-color: #ffffff;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 3em;
-    margin-top: -1em;
+    padding: 6em 1em 3em 1em;
+
 }
 
-section#waardering_en_bewaren h2 {
-    color: #2800a0;
-    margin: 0 0 .2em .5em;
+section#waardering_en_bewaren h1 {
+    color: #00d66c;
+    margin: 0;
 }
 
-section#waardering_en_bewaren [alt="unlike"] {
+
+section#waardering_en_bewaren button {
     align-self: flex-end;
-    margin: 1em .5em .5em .5em;
-    width: 3em;
-    height: 3em;
+    margin: -5em 0 0 auto;
+    background: none;
+    border: none;
+    padding: 0;
 }
+
+section#waardering_en_bewaren img[title="bewaren"] {
+    width: 3.5em;
+    margin: 0;
+}
+
+section#waardering_en_bewaren img[title="bewaren"]:hover {
+    background-color: #1e9162;
+    transition: .3s linear;
+}
+
+section#waardering_en_bewaren button:focus {
+    background-color: #1e9162;
+    transition: .3s linear;
+}
+
+section#waardering_en_bewaren h4 {
+    color: #2800a0;
+    margin: 3em 0 .5em 0;
+}
+
 
 /* Sterren en cijfer op een rij */
 
@@ -630,19 +938,29 @@ section#waardering_en_bewaren div p {
     background-color: #2800a0;
     padding: 0.5em .3em 0.2em .3em;
     border-radius: .5em;
-    margin: 0 0.3em 0 .5em;
+    margin: 0 0.3em 0 0;
+}
+
+section#waardering_en_bewaren button.bewaren {
+    margin: 0 0.3em;
+}
+
+section#waardering_en_bewaren button.bewaren:hover {
+    background-color: #5e40b8;
+}
+
+section#waardering_en_bewaren button.bewaren:focus {
+    background-color: #5e40b8;
 }
 
 section#waardering_en_bewaren div img {
-    margin: 0 .1em;
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
 }
-
 
 section#waardering_en_bewaren p {
     color: #2800a0;
-    margin: .5em 0 0 1em;
+    margin-top: .5em;
 }
 
 section#hetverhaal {
@@ -662,6 +980,143 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     display: none;
 }
 
+/* BEWAARDE VERHALEN */
+
+section#bewaarde_verhalen {
+    transition: .5s linear;
+    background-color: #f3e5d8;
+    margin: 5em 1em 2em 1em;
+    background-color: #f3e5d8;
+    margin: 0;
+    padding: 5em 2em 2em 2em;
+}
+
+section#bewaarde_verhalen h2 {
+    color: #2800a0;
+}
+
+section#bewaarde_verhalen button#download {
+    font-size: 1em;
+    background-color: #00d66c;
+    color: #ffffff;
+    padding: 0.4em .9em 0.5em .9em;
+    border-radius: 1.25em;
+    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
+    transition: .3s linear;
+    border: none;
+    margin: .5em 0 2em auto;
+}
+
+section#bewaarde_verhalen button#download:hover {
+    background-color: #4de298;
+}
+
+section#bewaarde_verhalen button#download:focus {
+    background-color: #4de298;
+}
+
+section#bewaarde_verhalen button#download:active {
+    background-color: #1e9162;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
+section#bewaarde_verhalen button#download.active {
+    background-color: #1e9162;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
+section#bewaarde_verhalen a {
+    text-decoration: none;
+}
+
+section#bewaarde_verhalen article {
+    width: 90%;
+    max-width: 22em;
+    position: relative;
+    margin: 0em auto 1em auto;
+}
+
+section#bewaarde_verhalen a:hover {
+    opacity: .6;
+    transition: .4s linear;
+
+}
+
+section#bewaarde_verhalen a:focus {
+    opacity: .6;
+    transition: .4s linear;
+}
+
+ssection#bewaarde_verhalen article:active {
+    margin-top: -.3em;
+    transition: .3s linear;
+}
+
+
+section#bewaarde_verhalen div article h4 {
+    color: #2800a0;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    margin-top: -0.4em;
+    padding: 0.5em 0.5em 1em 0.5em;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+}
+
+section#bewaarde_verhalen div article img:nth-child(1) {
+    border-top-left-radius: .75em;
+    border-top-right-radius: .75em;
+    width: 100%;
+    overflow: hidden;
+}
+
+section#bewaarde_verhalen div article p {
+    font-size: 1.3em;
+    color: #ffffff;
+    background-color: #2800a0;
+    padding: 0.3em .3em 0 .3em;
+    margin: 0;
+    position: absolute;
+    border-radius: .5em;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+
+section#bewaarde_verhalen div article img[title="bewaren"] {
+    max-width: 3.5em;
+    border: none;
+    background: none;
+    border-radius: .75em;
+}
+
+section#bewaarde_verhalen div article button {
+    position: absolute;
+    transition: .3s linear;
+    top: 0.5em;
+    right: 0.5em;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+section#bewaarde_verhalen article img[title="bewaren"]:hover {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+section#bewaarde_verhalen article button:focus {
+    background-color: #1e9162;
+    transition: .2s linear;
+}
+
+
+
+
+
+/* TABLET FORMAAT*/
+
 @media all and (min-width: 30em) {
 
     body {
@@ -680,36 +1135,36 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 1em;
-        margin: -1em 0 0 0;
+        margin: 0;
     }
 
-    section#intro h1 {
+    section#intro h2 {
         grid-area: 1 / 2 / 3 / 4;
         display: flex;
         align-items: center;
         margin: 0 auto 0 0;
-        width: 90%;
     }
 
-    section#intro h2 {
-        width: 100%;
+    section#intro h3 {
+        width: 90%;
         display: flex;
         align-items: center;
         margin: 0 0 0 auto;
         max-width: 6em;
     }
 
-    section#intro h2:nth-child(2) {
+    section#intro h3:nth-child(2) {
         grid-area: 1 / 1 / 2 / 2;
     }
 
-    section#intro h2:nth-child(1) {
+    section#intro h3:nth-child(1) {
         grid-area: 2 / 1 / 3 / 2;
     }
 
     section#best_gewaardeerd {
         grid-column: 1/4;
         overflow: hidden;
+        margin-top: -1em;
     }
 
     section#Filter {
@@ -717,14 +1172,11 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     }
 
     section#sorteer {
-        grid-column: 2/3;
-    }
-
-    main {
-        grid-column: 2/3;
+        grid-column: 1/4;
     }
 
     section#Resultaten {
+        grid-column: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
@@ -736,6 +1188,52 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     }
 
     section#Resultaten article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    section#Resultaten_vs2 {
+        display: none;
+    }
+
+    section#Resultaten_vs2.aan {
+                display: inherit;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten_vs2 article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten_vs2 article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    section#Resultaten_kleur {
+        display: none;
+    }
+
+    section#Resultaten_kleur.aan {
+                display: inherit;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten_kleur article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten_kleur article a {
         grid-column: 1/2;
         width: 100%;
         margin: 0em;
@@ -755,11 +1253,6 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     }
 
     /* DETAILPAGINA VERHAAL  */
-    section#verhaalintro {
-        grid-column: 1/4;
-        margin: -1em 0 0 0;
-    }
-
     section#waardering_en_bewaren {
         grid-column: 1/4;
         display: grid;
@@ -767,11 +1260,11 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-gap: 1em;
     }
 
-    section#waardering_en_bewaren h2 {
+    section#waardering_en_bewaren h3 {
         grid-column: 1/2;
     }
 
-    section#waardering_en_bewaren [title="unlike"] {
+    section#waardering_en_bewaren [title="bewaren"] {
         grid-column: 2/3;
         margin: .5em .5em 0 auto;
     }
@@ -804,8 +1297,33 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     }
 
 
+    /* BEWAARDE VERHALEN */
+    section#bewaarde_verhalen {
+        grid-column: 1/4;
+    }
+
+    section#bewaarde_verhalen div {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#bewaarde_verhalen article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#bewaarde_verhalen article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
 
 }
+
+/* DESKTOP FORMAAT */
 
 @media all and (min-width: 50em) {
 
@@ -818,7 +1336,6 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     header {
         grid-column: 1/4;
     }
-
     section#intro {
         grid-column: 1/4;
         display: grid;
@@ -827,15 +1344,15 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-gap: 1em;
     }
 
-    section#intro h1 {
+    section#intro h2 {
         grid-area: 1 / 2 / 3 / 3;
         display: flex;
         align-items: center;
         margin: 0;
-        width: 90%;
+        width: 100%;
     }
 
-    section#intro h2 {
+    section#intro h3 {
         width: 100%;
         display: flex;
         align-items: center;
@@ -844,11 +1361,11 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         justify-content: center;
     }
 
-    section#intro h2:nth-child(2) {
+    section#intro h3:nth-child(2) {
         grid-area: 1 / 1 / 2 / 2;
     }
 
-    section#intro h2:nth-child(1) {
+    section#intro h3:nth-child(1) {
         grid-area: 2 / 1 / 3 / 2;
     }
 
@@ -861,25 +1378,20 @@ section#hetverhaal img[alt="verliefd_desktop"] {
     }
 
     section#best_gewaardeerd {
-        grid-column: 2/3;
-        overflow: hidden;
-    }
-
-    section#Filter {
         grid-column: 1/4;
+        overflow: hidden;
         grid-template-columns: 5% 1fr 5%;
         display: grid;
     }
 
-    section#Filter h2 {
+    section#best_gewaardeerd h3,
+    p,
+    div {
         grid-column: 2/3;
+
     }
 
-    section#Filter div {
-        grid-column: 2/3;
-    }
-
-    section#Filter h3 {
+    section#Filter {
         grid-column: 2/3;
     }
 
@@ -887,11 +1399,8 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-column: 2/3;
     }
 
-    main {
-        grid-column: 2/3;
-    }
-
     section#Resultaten {
+        grid-column: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1em;
@@ -902,7 +1411,52 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         justify-content: center;
     }
 
-    section#Resultaten article a{
+    section#Resultaten article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    section#Resultaten_vs2 {
+        display: none;
+    }
+    section#Resultaten_vs2.aan {
+                display: inherit;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten_vs2 article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten_vs2 article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
+    section#Resultaten_kleur {
+        display: none;
+    }
+
+    section#Resultaten_kleur.aan {
+                display: inherit;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#Resultaten_kleur article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#Resultaten_kleur article a {
         grid-column: 1/2;
         width: 100%;
         margin: 0em;
@@ -928,11 +1482,6 @@ section#hetverhaal img[alt="verliefd_desktop"] {
 
 
     /* DETAILPAGINA VAN HET VERHAAL  */
-    section#verhaalintro {
-        grid-column: 1/4;
-    }
-
-
     section#waardering_en_bewaren {
         grid-column: 1/4;
         display: grid;
@@ -940,13 +1489,13 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         grid-gap: 1em;
     }
 
-    section#waardering_en_bewaren h2 {
+    section#waardering_en_bewaren h1,
+    h4 {
         grid-column: 2/3;
     }
 
-    section#waardering_en_bewaren [title="unlike"] {
+    section#waardering_en_bewaren [title="bewaren"] {
         grid-column: 3/4;
-        margin: .5em .5em 0 auto;
     }
 
     /* Sterren en cijfer op een rij */
@@ -960,7 +1509,7 @@ section#hetverhaal img[alt="verliefd_desktop"] {
 
     section#hetverhaal {
         width: 100%;
-        grid-column: 2/3;
+        grid-column: 1/4;
     }
 
     section#hetverhaal img[alt="verliefd_mobile"] {
@@ -975,5 +1524,31 @@ section#hetverhaal img[alt="verliefd_desktop"] {
         display: block;
         width: 100%;
     }
+
+    /* BEWAARDE VERHALEN */
+    section#bewaarde_verhalen {
+        grid-column: 1/4;
+        padding: 5em 2em 10em 2em;
+
+    }
+
+    section#bewaarde_verhalen div {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    section#bewaarde_verhalen article {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#bewaarde_verhalen article a {
+        grid-column: 1/2;
+        width: 100%;
+        margin: 0em;
+    }
+
 
 }

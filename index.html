@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Transavia verhalen voor onderweg</title>
+    <title>Transavia verhalen voor op reis</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -15,42 +15,45 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html"> <img src="images/logo.png" alt="logo_transavia"></a></li>
+                    <a href="index.html"> <img src="images/logo.png" alt="logo_transavia"></a>
+                </li>
                 <li>
                     <a href="login.html"> <img src="images/login_icon.png" alt="login_icon"></a></li>
                 <li>
-                    <a href="favorieten.html"> <img src="images/hart.png" alt="favorieten"></a></li>
+                    <a href="favorieten.html"> <img src="images/boek.png" alt="bewaard"></a></li>
+                <li><img src="images/1.png" alt="plus"></li>
             </ul>
         </nav>
     </header>
 
     <section id="intro">
-        <h1> Verhalen voor onderweg</h1>
-        <h2> 99 Verhalen</h2>
-        <h2> Kies zelf de sfeer</h2>
+        <h2> Verhalen voor op reis</h2>
+        <h3> 99 Verhalen</h3>
+        <h3> Kies en neem mee</h3>
         <img src="images/logo_Tekengebied%201.png" title="logo Transavia" alt="logo Transavia" />
     </section>
 
     <!-- Top 5 verhalen -->
     <section id="best_gewaardeerd">
-        <h2> Best gewaardeerde verhalen </h2>
+        <h3> Best gewaardeerde verhalen </h3>
+        <p>Onze reizigers raden deze verhalen aan voor uw reis.</p>
         <div>
 
             <article>
                 <a href="detailpagina.html">
                     <img src="images/verliefd.jpeg" title="Verliefd" alt="verhaal" />
                 <p>8,3</p>
-                <h3>Verliefd</h3>
+                <h4>Verliefd</h4>
                 </a>
-                <img class='hartje' src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
             <article><a href="detailpagina.html"><img src="images/decock.jpeg" alt="verhaal" />
                     <p>8,3</p>
-                    <h3>De Cock en het raadsel van het verdwenen boek</h3>
+                    <h4>De Cock en het raadsel van het verdwenen boek</h4>
                     </a>
-                <img class='hartje' src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
@@ -58,9 +61,9 @@
             <article>
                 <a href="detailpagina.html"><img src="images/onomatopee.jpeg" title="Verliefd" alt="verhaal" />
                         <p>8,3</p>
-                        <h3>Onomatopeer</h3>
+                        <h4>Onomatopeer</h4>
                         </a>
-                <img class='hartje' src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
@@ -70,9 +73,9 @@
                 <a href="detailpagina.html">
                         <img src="images/stoned.jpeg" title="Verliefd" alt="verhaal" />
                         <p>8,3</p>
-                        <h3>Stoned</h3>
+                        <h4>Stoned</h4>
                         </a>
-                <img class='hartje' src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
@@ -80,9 +83,9 @@
             <article> <a href="detailpagina.html">
                         <img src="images/poepen.jpeg" title="Verliefd" alt="verhaal" />
                         <p>8,3</p>
-                        <h3>Poepen</h3>
+                        <h4>Poepen</h4>
                        </a>
-                <img class='hartje' src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
@@ -90,9 +93,9 @@
             <article> <a href="detailpagina.html">
                         <img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
                         <p>8,3</p>
-                        <h3>Sportcommentaar</h3>
+                        <h4>Sportcommentaar</h4>
                        </a>
-                <img src="images/unlike.png" title="unlike" alt="unlike">
+                <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
             </article>
 
 
@@ -104,7 +107,8 @@
 
     <section id="Filter">
 
-        <h2> Kies een stemming </h2>
+        <h3> Kies een stemming </h3>
+        <p> Elk verhaal heeft zijn eigen sfeer en stemming. Zoek een verhaal die bij je past door het filter te gebruiken.</p>
         <div>
             <button id="blij"> Blij </button>
             <button id="boos"> Boos </button>
@@ -113,118 +117,254 @@
             <button id="vaag"> Vaag </button>
             <button id="inspirerend"> Inspirerend </button>
         </div>
-
-        <h3>99 Resultaten </h3>
-
     </section>
 
     <!-- Sorteren -->
+
+
     <section id="sorteer">
-        <form action="index.html" method="get">
-            <select>
-                          <option value="sorteer"
-                          disabled="disabled"
-                          selected="selected" > Sorteer</option>
 
-                           <option value="titel_az" > Titel A-Z</option>
+        <h3>Sorteer op:</h3>
 
-                             <option value="tetel_za"> Titel Z-A </option>
+        <div>
+            <button class="aan" id="titel_az"> Titel A-Z</button>
 
-                            <option value="waardering"> Waardering </option>
-                        </select>
-        </form>
+            <button id="titel_za"> Titel Z-A</button>
+
+            <button id="waardering"> Waardering</button>
+        </div>
+
+        <h4>99 resultaten </h4>
     </section>
 
     <!-- Resultaten -->
-    <main>
-
-        <section id="Resultaten">
 
 
-            <article>
-                <a href="detailpagina.html">
+
+    <section id="Resultaten">
+
+        <article>
+            <a href="detailpagina.html">
                    <img src="images/decock.jpeg" alt="verhaal" />
                     <p>8,3</p>
 
-                    <h3> De Cock en het raadsel van het verdwenen boek </h3>
+                    <h4> De Cock en het raadsel van het verdwenen boek </h4>
                      </a>
-                <img src="images/unlike.png" title="unlike" alt="unlike">
-            </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
-            <article>
-                <a href="detailpagina.html">
+        <article>
+            <a href="detailpagina.html">
                    <img src="images/droom.png" alt="verhaal" />
                     <p>8,3</p>
 
-                    <h3> Droom</h3>
+                    <h4> Droom</h4>
                     </a>
-                <img src="images/unlike.png" title="unlike" alt="unlike">
-            </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
 
 
-            <article>
-                <a href="detailpagina.html">
+        <article>
+            <a href="detailpagina.html">
                              <img src="images/onomatopee.jpeg" alt="verhaal" />
                     <p>8,3</p>
 
-                    <h3> Onomatope</h3>
+                    <h4> Onomatope</h4>
                 </a>
-                <img src="images/unlike.png" title="unlike" alt="unlike">
-            </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
 
-
-                <article>
-                   <a href="detailpagina.html">
+        <article>
+            <a href="detailpagina.html">
                    <img src="images/poepen.jpeg" alt="verhaal" />
                     <p>8,3</p>
 
-                    <h3>Poepen</h3>
+                    <h4>Poepen</h4>
 
                      </a>
-                     <img src="images/unlike.png" title="unlike" alt="unlike">
-                </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
 
 
-                <article>
-                   <a href="detailpagina.html"><img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
+        <article>
+            <a href="detailpagina.html"><img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
                     <p>8,3</p>
 
-                    <h3> Sportcommentaar</h3>
+                    <h4> Sportcommentaar</h4>
                   </a>
-                  <img src="images/unlike.png" title="unlike" alt="unlike">
-                  </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren">
+                 </button>
+        </article>
 
 
 
-                <article>
-                       <a href="detailpagina.html">
+        <article>
+            <a href="detailpagina.html">
                        <img src="images/stoned.jpeg" alt="sportcommentaar" />
                     <p>8,3</p>
 
-                    <h3> Stoned</h3>
+                    <h4> Stoned</h4>
                          </a>
-                          <img src="images/unlike.png" title="unlike" alt="unlike">
-                </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
 
 
-                <article>
-                   <a href="detailpagina.html">
+        <article>
+            <a href="detailpagina.html">
                    <img src="images/verliefd.jpeg" alt="verhaal" />
                     <p>8,3</p>
 
-                    <h3> Verliefd</h3>
+                    <h4> Verliefd</h4>
                       </a>
-                       <img src="images/unlike.png" title="unlike" alt="unlike">
-                </article>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
 
 
-        </section>
+    </section>
 
-    </main>
+
+
+
+    <section id="Resultaten_vs2">
+
+
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/verliefd.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+
+                    <h4> Verliefd</h4>
+                      </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+
+        <article>
+            <a href="detailpagina.html">
+                       <img src="images/stoned.jpeg" alt="sportcommentaar" />
+                    <p>8,3</p>
+
+                    <h4> Stoned</h4>
+                         </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/poepen.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+
+                    <h4>Poepen</h4>
+
+                     </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/droom.png" alt="verhaal" />
+                    <p>8,3</p>
+
+                    <h4> Droom</h4>
+                    </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+
+
+        <article>
+            <a href="detailpagina.html">
+                             <img src="images/onomatopee.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+
+                    <h4> Onomatope</h4>
+                </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/decock.jpeg" alt="verhaal" />
+                    <p>8,3</p>
+
+                    <h4> De Cock en het raadsel van het verdwenen boek </h4>
+                     </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren"></button>
+        </article>
+
+
+        <article>
+            <a href="detailpagina.html"><img src="images/sportcommentaar.jpeg" alt="sportcommentaar" />
+                    <p>8,3</p>
+
+                    <h4> Sportcommentaar</h4>
+                  </a>
+            <button> <img class='bewaar' src="images/plus.png" title="bewaren" alt="bewaren">
+                 </button>
+        </article>
+
+
+
+
+    </section>
+
+    <section id="Resultaten_kleur">
+
+
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                  <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                  <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                 <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                   <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                 <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+        <article>
+            <a href="detailpagina.html">
+                 <img src="images/groen.jpg" alt="verhaal" />
+                    <h4> </h4>
+                      </a>
+        </article>
+
+
+
+
+    </section>
+
 
     <script type="text/javascript" src="script/script.js"></script>
 </body>
