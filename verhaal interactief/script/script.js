@@ -2,8 +2,6 @@
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
 
-/* Bron: https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js*/
-
 var animateHTML = function() {
   var elems;
   var windowHeight;

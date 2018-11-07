@@ -988,7 +988,7 @@ section#bewaarde_verhalen {
     margin: 5em 1em 2em 1em;
     background-color: #f3e5d8;
     margin: 0;
-    padding: 5em 2em 2em 2em;
+    padding: 5em 2em 100em 2em;
 }
 
 section#bewaarde_verhalen h2 {
@@ -1025,6 +1025,36 @@ section#bewaarde_verhalen button#download.active {
     box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
 }
 
+section#bewaarde_verhalen button#gedownload {
+    font-size: 1em;
+    background-color: #1e9162;
+    color: #ffffff;
+    padding: 0.4em .9em 0.5em .9em;
+    border-radius: 1.25em;
+    box-shadow: inset 0 -.1875rem .0625rem #1e9162;
+    transition: .3s linear;
+    border: none;
+    margin: .5em 0 2em auto;
+}
+
+section#bewaarde_verhalen button#gedownload:hover {
+    background-color: #4de298;
+}
+
+section#bewaarde_verhalen button#gedownload:focus {
+    background-color: #4de298;
+}
+
+section#bewaarde_verhalen button#gedownload:active {
+    background-color: #1e9162;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
+section#bewaarde_verhalen button#gedownload.active {
+    background-color: #1e9162;
+    box-shadow: inset 0 0.1875rem 0.0625rem #1e9162;
+}
+
 section#bewaarde_verhalen a {
     text-decoration: none;
 }
@@ -1035,6 +1065,7 @@ section#bewaarde_verhalen article {
     position: relative;
     margin: 0em auto 1em auto;
 }
+
 
 section#bewaarde_verhalen a:hover {
     opacity: .6;
@@ -1110,10 +1141,6 @@ section#bewaarde_verhalen article button:focus {
     background-color: #1e9162;
     transition: .2s linear;
 }
-
-
-
-
 
 /* TABLET FORMAAT*/
 
@@ -1319,7 +1346,6 @@ section#bewaarde_verhalen article button:focus {
         width: 100%;
         margin: 0em;
     }
-
 
 }
 
@@ -1549,6 +1575,4 @@ section#bewaarde_verhalen article button:focus {
         width: 100%;
         margin: 0em;
     }
-
-
 }
